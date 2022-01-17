@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/MohEssmat/Social-Network-API/issues"
   },
-  "homepage": "https://github.com/jpd61/social-network-api#readme",
+  "homepage": "https://github.com/MohEssmat/Social-Network-API#readme",
   "dependencies": {
     "express": "^4.17.1",
     "moment": "^2.27.0",
