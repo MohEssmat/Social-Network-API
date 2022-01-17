@@ -1,24 +1,22 @@
 // Require express router
 const router = require("express").Router();
-
-// Set requirements (from users-controller)
 const {
-  getAllUsers,
+  getUsers,
   getSingleUser,
   createUser,
-  updateUser,
   deleteUser,
+  updateUser,
   addFriend,
   removeFriend,
 } = require("../../controllers/userController");
 
-// '/api/users'
-router.route("/").get(getAllUsers).post(createUser);
+// /api/users
+router.route("/").get(getUsers).post(createUser);
 
-// '/api/users/:userId'
+// /api/users/:userId
 router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
-// 'api/users/:userId/friends/:friendId'
+// /api/users/:userId/friends/:friendId
 router.route("/:userId/friends/:friendId").post(addFriend).delete(removeFriend);
 
 module.exports = router;

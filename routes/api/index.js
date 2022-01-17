@@ -1,9 +1,9 @@
 // Set requirements (Express Router)
 const router = require("express").Router();
-const apiRoutes = require("./api");
+const usersRoutes = require("./usersRoutes");
+const thoughtsRoutes = require("./thoughtsRoutes");
 
-router.use("/api", apiRoutes);
-
-router.use((req, res) => res.send("Wrong route!"));
+router.use("/users", usersRoutes);
+router.use("/thoughts", thoughtsRoutes);
 
 module.exports = router;
