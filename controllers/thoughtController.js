@@ -1,9 +1,9 @@
-const { Thought, User, Reaction } = require("../models");
+const { Thought } = require("../models");
 
 module.exports = {
   getThoughts(req, res) {
     Thought.find()
-      .then((thoughts) => res.json(thoughts))
+      .then((thought) => res.json(thought))
       .catch((err) => res.status(500).json(err));
   },
 
@@ -13,8 +13,7 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({
-              message: `Hmmmm, curious.
-      No thought with that ID was found!`,
+              message: `No thought with that ID was found!`,
             })
           : res.json(thought)
       )
@@ -35,7 +34,7 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({
-              messgae: `Hmmm, I wonder.
+              messgae: `
               There doesn't seem to be any thought associated with that ID!`,
             })
           : res.json(thought)
@@ -52,7 +51,7 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({
-              message: `Hmmmm, I wonder.
+              message: `
         There seems to be no thoughts associated with this ID!`,
             })
           : res.json(thought)
@@ -69,7 +68,7 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({
-              message: `Hmmmm, curious.
+              message: `
         There's no thought found with that ID`,
             })
           : res.json(thought)
@@ -91,7 +90,7 @@ module.exports = {
     ).then((thought) =>
       !thought
         ? res.status(404).json({
-            message: `Very curious indeed.
+            message: `
     No thoughts found with that ID.`,
           })
         : res.json(thought)
