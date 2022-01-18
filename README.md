@@ -1,13 +1,12 @@
 <h1 align="center"> Social Networking API 👋</h1>
 
-
 ## Description
 
 🔍 an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
 💻 Below is a video of the application:
 
-![social-network-api](./assets/users.gif)
+![social-network-api](./assets/user-thought.gif)
 
 ## User Story
 
