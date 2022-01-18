@@ -3,7 +3,7 @@ const { Thought } = require("../models");
 module.exports = {
   getThoughts(req, res) {
     Thought.find()
-      .then((thought) => res.json(thought))
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
 
@@ -35,7 +35,7 @@ module.exports = {
         !thought
           ? res.status(404).json({
               messgae: `
-              There doesn't seem to be any thought associated with that ID!`,
+              No thought associated with that ID!`,
             })
           : res.json(thought)
       )
@@ -52,7 +52,7 @@ module.exports = {
         !thought
           ? res.status(404).json({
               message: `
-        There seems to be no thoughts associated with this ID!`,
+        No thoughts associated with this ID!`,
             })
           : res.json(thought)
       )
